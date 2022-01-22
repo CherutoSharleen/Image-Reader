@@ -22,6 +22,7 @@ Use the command streamlit run thefilename.py in this case it is streamlit run st
 1. The Initial Part For Selecting an Image
 <img width="410" alt="IDReader 1" src="https://user-images.githubusercontent.com/92080989/150647729-c36e7466-6bd6-442b-8652-c44a616e42d0.PNG">
 
+
 2. A Selected Image(Left) and Expected Text Output(Right)
 ** Some Information has been coloured out since this is a Picture from the internet
 ![image](https://user-images.githubusercontent.com/92080989/150647704-e085fb90-531f-4680-91da-3dd05fdd63ae.png)
