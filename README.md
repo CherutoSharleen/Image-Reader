@@ -14,7 +14,7 @@ Once the file is selected the image is preprocessed(resizing, dilation and erosi
 
 
 
-**How To Run It**
+**How To Run It.**
 
 Use the command streamlit run thefilename.py in this case it is streamlit run streamlit_image_reader.py
 
