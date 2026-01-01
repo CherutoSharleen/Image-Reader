@@ -1,0 +1,6 @@
+[
+  {"id":"f1","question":"How do I improve OCR accuracy?","answer":"Use high-contrast images and clean text regions before extraction."},
+  {"id":"f2","question":"Why does OCR fail on blurry photos?","answer":"Blur destroys character edges, so preprocessing and better input quality are required."},
+  {"id":"f3","question":"Can OCR read handwritten notes?","answer":"Basic OCR struggles with handwriting unless models are specifically trained for it."},
+  {"id":"f4","question":"How should I store extracted text?","answer":"Save plain text with source metadata such as filename and extraction time."}
+]
