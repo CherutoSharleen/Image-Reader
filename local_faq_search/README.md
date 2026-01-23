@@ -6,7 +6,7 @@ This mini application performs local FAQ retrieval using TF-IDF and cosine simil
 
 ```bash
 cd local_faq_search
-python -c "from pathlib import Path; from tfidf_faq import search_with_answers; print(search_with_answers(Path('faq.json'), 'blurry photos', top_k=2))"
+python cli.py
 ```
 
 ## Test
