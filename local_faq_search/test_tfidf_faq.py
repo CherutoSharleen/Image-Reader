@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from tfidf_faq import search_faq, search_with_answers
+from tfidf_faq import highlight_terms, search_faq, search_with_answers
 
 
 class FaqSearchTests(unittest.TestCase):
@@ -15,6 +15,11 @@ class FaqSearchTests(unittest.TestCase):
         question, answer, _ = search_with_answers(path, "store extracted text", top_k=1)[0]
         self.assertIn("store extracted text", question.lower())
         self.assertIn("metadata", answer.lower())
+
+    def test_highlight_terms_marks_query_words(self) -> None:
+        highlighted = highlight_terms("OCR fails on blurry photos", "blurry OCR")
+        self.assertIn("[OCR]", highlighted)
+        self.assertIn("[blurry]", highlighted.lower())
 
 
 if __name__ == "__main__":

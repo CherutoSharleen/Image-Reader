@@ -54,3 +54,16 @@ def search_with_answers(path: Path, query: str, top_k: int = 2) -> list[tuple[st
     ranked = search_faq(path, query, top_k=top_k)
     lookup = {row["question"]: row["answer"] for row in faq}
     return [(question, lookup[question], score) for question, score in ranked]
+
+
+def highlight_terms(text: str, query: str) -> str:
+    tokens = set(tokenize(query))
+    words = text.split()
+    highlighted = []
+    for word in words:
+        clean = re.sub(r"[^a-z0-9']", "", word.lower())
+        if clean in tokens and clean:
+            highlighted.append(f"[{word}]")
+        else:
+            highlighted.append(word)
+    return " ".join(highlighted)
