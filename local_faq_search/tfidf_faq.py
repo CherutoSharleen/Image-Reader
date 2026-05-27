@@ -67,3 +67,9 @@ def highlight_terms(text: str, query: str) -> str:
         else:
             highlighted.append(word)
     return " ".join(highlighted)
+
+
+def overlap_terms(question: str, query: str) -> list[str]:
+    question_terms = set(tokenize(question))
+    query_terms = set(tokenize(query))
+    return sorted(question_terms & query_terms)

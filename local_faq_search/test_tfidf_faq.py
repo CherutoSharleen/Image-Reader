@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from tfidf_faq import highlight_terms, search_faq, search_with_answers
+from tfidf_faq import highlight_terms, overlap_terms, search_faq, search_with_answers
 
 
 class FaqSearchTests(unittest.TestCase):
@@ -20,6 +20,10 @@ class FaqSearchTests(unittest.TestCase):
         highlighted = highlight_terms("OCR fails on blurry photos", "blurry OCR")
         self.assertIn("[OCR]", highlighted)
         self.assertIn("[blurry]", highlighted.lower())
+
+    def test_overlap_terms(self) -> None:
+        overlaps = overlap_terms("OCR fails on blurry photos", "blurry OCR setup")
+        self.assertEqual(overlaps, ["blurry", "ocr"])
 
 
 if __name__ == "__main__":
