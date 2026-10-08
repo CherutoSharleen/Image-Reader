@@ -31,3 +31,10 @@ Use the command streamlit run thefilename.py in this case it is streamlit run st
 1. The Application is accurate to some extent, that is when working with clear images, with colour contrasting foregrounds and backgrounds. The text should also be legible.
 If a trained model is to be used it would improve the accuracy significantly.
 2. I had an issue trying to upload the file using streamlit and still reading the same file from the storage. _My workarond:_ Saving uploaded files to a new folder that is being called within the application when I attempt to read the Image.(Suggestions on how to improve this are highly welcomed)
+
+## Educational mini-project in this repository
+
+- **Path:** `local_faq_search`
+- **Focus:** local FAQ retrieval with TF-IDF scoring, highlighting, and term overlap helpers.
+- **Run:** `cd local_faq_search && python cli.py`
+- **Test:** `cd local_faq_search && python -m unittest test_tfidf_faq.py`
