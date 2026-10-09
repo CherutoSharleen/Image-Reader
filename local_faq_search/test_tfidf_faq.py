@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from tfidf_faq import highlight_terms, overlap_terms, search_faq, search_with_answers
+from tfidf_faq import highlight_terms, normalized_query_terms, overlap_terms, search_faq, search_with_answers
 
 
 class FaqSearchTests(unittest.TestCase):
@@ -24,6 +24,10 @@ class FaqSearchTests(unittest.TestCase):
     def test_overlap_terms(self) -> None:
         overlaps = overlap_terms("OCR fails on blurry photos", "blurry OCR setup")
         self.assertEqual(overlaps, ["blurry", "ocr"])
+
+    def test_normalized_query_terms(self) -> None:
+        terms = normalized_query_terms("ocr OCR blurry")
+        self.assertEqual(terms, ["blurry", "ocr"])
 
 
 if __name__ == "__main__":

@@ -73,3 +73,7 @@ def overlap_terms(question: str, query: str) -> list[str]:
     question_terms = set(tokenize(question))
     query_terms = set(tokenize(query))
     return sorted(question_terms & query_terms)
+
+
+def normalized_query_terms(query: str) -> list[str]:
+    return sorted(set(tokenize(query)))
